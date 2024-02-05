@@ -33,3 +33,6 @@ jobs:
 
       - name: Upload image to GCR
         run: gcloud builds submit --tag us-central1-docker.pkg.dev/notely-413322/notely-ar-repo/jerrydevs/notely:latest .
+
+      - name: Deploy to Cloud Run
+        run: gcloud run deploy notely --image us-central1-docker.pkg.dev/notely-413322/notely-ar-repo/jerrydevs/notely:latest --region us-central1 --allow-unauthenticated --max-instances=4 --project notely-413322
