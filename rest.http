@@ -1,1 +1,20 @@
 GET http://localhost:8000/sanity
+
+
+###
+
+POST localhost:8080/v1/users
+Content-Type: application/json
+
+{
+  "name": "jerry1"
+}
+
+###
+
+POST https://notely-4p5fkbx5sa-uc.a.run.app/v1/users
+Content-Type: application/json
+
+{
+  "name": "jerry"
+}
